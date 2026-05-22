@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website | Bukuru Seba</title>
+    <link rel="stylesheet" href="../Css/styyle.css" />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap" 
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <div class="nav-logo">BUKURU SEBA</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-circle"></div>
+      <div class="hero-circle2"></div>
+      <div class="hero-content">
+        <p class="hero-tag">✦ Official Website ✦</p>
+        <h1 class="hero-name">BUKURU<br />SEBA</h1>
+        <p class="hero-desc">
+          Singer &nbsp;·&nbsp; Songwriter &nbsp;·&nbsp; Gospel Artist
+        </p>
+        <a href="https://youtube.com/@bukuruseba-official?si=5FtAS34R1mo6Xijf" class="btn" target="_blank">Listen to My Music</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="about-inner">
+        <div class="about-photo">
+          <img
+            src="Bukuru seba.jpeg"
+            alt="Bukuru seba portrait"
+            style="width: 120%;border-radius: 50%;"
+          />
+        </div>
+        <div class="about-text">
+          <p class="section-label">About Me</p>
+          <h2>Music With Purpose & Heart</h2>
+          <p>
+            Bukuru Seba is a passionate music artist dedicated to touching
+            hearts through powerful melodies and meaningful lyrics. With a
+            God-given voice and a heart for people, Bukuru creates music that
+            uplifts, inspires, and transforms lives everywhere.
+          </p>
+          <div class="about-stats">
+            <div class="stat"><span>3+</span><small>Years Active</small></div>
+            <div class="stat"><span>1</span><small>Albums</small></div>
+            <div class="stat"><span>5+</span><small>Live Shows</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MUSIC -->
+    <section class="music" id="music">
+      <p class="section-label center">Discography</p>
+      <h2 class="center">My Music</h2>
+      <div class="music-grid">
+        <div class="song-card">
+          <div class="song-cover red">🎵</div>
+          <div class="song-info">
+            <h3>
+              <a href="https://youtu.be/fCi0bxPs-GU?is=xOC3Q8Fn5ZY4q8hW" target="_blank">MUGENZI IHUTE</a>
+            </h3>
+            <p>Gospel · 2026</p>
+            <span class="tag">Latest</span>
+          </div>
+        </div>
+
+        <div class="song-card">
+          <div class="song-cover blue">🎶</div>
+          <div class="song-info">
+            <h3>
+              <a href="https://youtu.be/ioWzzpUbnX0?is=HNOINnuQEdzkC--s" target="_blank"> IGITARAMO</a>
+            </h3>
+            <p>Worship · 2026</p>
+          </div>
+        </div>
+      
+        <div class="song-card">
+          <div class="song-cover gold">🎼</div>
+          <div  class="song-info"> 
+            <h3>
+              <a href="https://youtu.be/mPB4lThGmZQ?is=xbTUeXye0j8TgEAW" target="_blank">MUREBE URUKUNDO</a>
+            </h3>
+            <p>Praise · 2025</p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <p class="section-label center">Get In Touch</p>
+      <h2 class="center">Book or Connect</h2>
+      <form class="contact-form" id="contactForm">
+  <input type="text" id="name" placeholder="Your Name" />
+  <input type="email" id="email" placeholder="Your Email" />
+  <input type="text" id="subject" placeholder="Subject (e.g. Booking, Collaboration)" />
+  <textarea id="message" placeholder="Your Message..."></textarea>
+
+  <!-- Message that shows after submission -->
+  <p id="formMessage"></p>
+
+  <button type="submit" class="btn">Send Message</button>
+</form>
+      <div class="socials">
+        <a href="https://youtube.com/@bukuruseba-official?si=5FtAS34R1mo6Xijf" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=wy40kzi" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com/share/18puNdUDHs/" target="_blank">Facebook</a>
+        <a href="https://open.spotify.com/user/31c6u2ihvyvjnzfrluellefgde4u?si=KYbStnVSQh20MpomuFoebg" target="_blank">Spotify</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>
+        © 2026 <strong>Bukuru Seba</strong>. Let everything that has breath
+        praise the LORD.(Psalms 150:6)
+      </p>
+    </footer>
+    <script>
+
+  // Step 1: Find the form by its id
+  const form = document.getElementById('contactForm');
+
+  // Step 2: Listen for when the form is submitted
+  form.addEventListener('submit', function(event) {
+
+    // Step 3: Stop the page from reloading
+    event.preventDefault();
+
+    // Step 4: Get the value from each input field
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Step 5: Find the message paragraph
+    const formMessage = document.getElementById('formMessage');
+
+    // Step 6: Check if any field is empty
+    if (name === '' || email === '' || subject === '' || message === '') {
+      formMessage.textContent = '⚠️ Please fill in all fields before sending.';
+      formMessage.className = 'error';
+      return;
+    }
+
+    // Step 7: Check if email looks valid
+    if (!email.includes('@') || !email.includes('.')) {
+      formMessage.textContent = '⚠️ Please enter a valid email address.';
+      formMessage.className = 'error';
+      return;
+    }
+
+    // Step 8: If everything is correct, show success message
+    formMessage.textContent = '✅ Message sent successfully! Bukuru Seba will get back to you soon.';
+    formMessage.className = 'success';
+
+    // Step 9: Clear all the form fields
+    document.getElementById('name').value    = '';
+    document.getElementById('email').value   = '';
+    document.getElementById('subject').value = '';
+    document.getElementById('message').value = '';
+
+  });
+
+</script>
+  </body>
+</html>

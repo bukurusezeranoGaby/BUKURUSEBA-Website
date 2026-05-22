@@ -1,0 +1,450 @@
+/* ============================
+   RESET & BASE
+   ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'lato', sans-serif;
+  background: #241c1c;
+  color: #050505;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================
+   NAVBAR
+   ============================ */
+.nav {
+  position:sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: rgba(10, 10, 10, 0.92);
+  border-bottom: 1px solid rgba(255, 165, 0, 0.15);
+}
+
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 3px;
+  color: #ffa500;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #bbb;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffa500;
+}
+
+/* ============================
+   BUTTON
+   ============================ */
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #ffa500;
+  color: #0a0a0a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 2px solid #ffa500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #ffa500;
+}
+
+/* ============================
+   HERO
+   ============================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 30px 60px;
+  position: relative;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.hero-circle {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,165,0,0.08), transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.hero-circle2 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 165, 0, 0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 4s ease-in-out infinite reverse;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffa500;
+  margin-bottom: 20px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(80px, 16vw, 160px);
+  line-height: 0.9;
+  color: #ffffff;
+  letter-spacing: 6px;
+  margin-bottom: 22px;
+  animation: fadeUp 0.9s ease 0.1s both;
+}
+
+.hero-desc {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 40px;
+  animation: fadeUp 1s ease 0.2s both;
+}
+
+.hero .btn {
+  animation: fadeUp 1s ease 0.3s both;
+}
+
+/* ============================
+   ABOUT
+   ============================ */
+.about {
+  padding: 100px 50px;
+  background: #111;
+}
+
+.about-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-photo {
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+  border: 3px solid #ffa500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffa500;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.about-text h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.about-text p {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.about-stats {
+  display: flex;
+  gap: 36px;
+}
+
+.stat span {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: #ffa500;
+  line-height: 1;
+}
+
+.stat small {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+/* ============================
+   MUSIC
+   ============================ */
+.music {
+  padding: 100px 50px;
+  background: #0a0a0a;
+}
+
+.music h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: #fff;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
+}
+
+.center {
+  text-align: center;
+}
+
+.music-grid {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.song-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #141414;
+  border: 1px solid #222;
+  padding: 24px;
+  transition: border-color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.song-card:hover {
+  border-color: #ffa500;
+  transform: translateX(6px);
+}
+
+.song-cover {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  flex-shrink: 0;
+}
+
+.song-cover.red  { background: linear-gradient(135deg, #1a1a2e, #e94560); }
+.song-cover.blue { background: linear-gradient(135deg, #0f3460, #533483); }
+.song-cover.gold { background: linear-gradient(135deg, #c8963e, #3a0a00); }
+
+.song-info h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.song-info p {
+  font-size: 13px;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #ffa500;
+  color: #0a0a0a;
+}
+
+/* ============================
+   CONTACT
+   ============================ */
+.contact {
+  padding: 100px 50px;
+  background: #111;
+}
+
+.contact h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: #fff;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: #ddd;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffa500;
+}
+
+.contact-form textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.socials a {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #ffa500;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+.footer {
+  background: #0a0a0a;
+  border-top: 1px solid #1a1a1a;
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 13px;
+  color: #444;
+  letter-spacing: 1px;
+}
+
+.footer strong {
+  color: #ffa500;
+}
+
+/* ============================
+   ANIMATIONS
+   ============================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -55%) scale(1); }
+  50%       { transform: translate(-50%, -55%) scale(1.12); }
+}
+
+/* ============================
+   RESPONSIVE (Mobile)
+   ============================ */
+@media (max-width: 768px) {
+  .nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .hero-name { font-size: clamp(70px, 20vw, 120px); }
+  .about { padding: 70px 24px; }
+  .about-inner { flex-direction: column; text-align: center; }
+  .about-stats { justify-content: center; }
+  .music { padding: 70px 24px; }
+  .contact { padding: 70px 24px; }
+}
+/* Form feedback messages */
+#formMessage {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 10px 0;
+}
+
+#formMessage.success {
+  color: #4caf50;
+}
+
+#formMessage.error {
+  color: #e94560;
+}
