@@ -135,43 +135,37 @@
     </footer>
     <script>
 
-  // Step 1: Find the form by its id
   const form = document.getElementById('contactForm');
 
-  // Step 2: Listen for when the form is submitted
   form.addEventListener('submit', function(event) {
 
-    // Step 3: Stop the page from reloading
     event.preventDefault();
 
-    // Step 4: Get the value from each input field
+
     const name    = document.getElementById('name').value.trim();
     const email   = document.getElementById('email').value.trim();
     const subject = document.getElementById('subject').value.trim();
     const message = document.getElementById('message').value.trim();
 
-    // Step 5: Find the message paragraph
+  
     const formMessage = document.getElementById('formMessage');
 
-    // Step 6: Check if any field is empty
     if (name === '' || email === '' || subject === '' || message === '') {
       formMessage.textContent = '⚠️ Please fill in all fields before sending.';
       formMessage.className = 'error';
       return;
     }
 
-    // Step 7: Check if email looks valid
+    
     if (!email.includes('@') || !email.includes('.')) {
       formMessage.textContent = '⚠️ Please enter a valid email address.';
       formMessage.className = 'error';
       return;
     }
 
-    // Step 8: If everything is correct, show success message
     formMessage.textContent = '✅ Message sent successfully! Bukuru Seba will get back to you soon.';
     formMessage.className = 'success';
 
-    // Step 9: Clear all the form fields
     document.getElementById('name').value    = '';
     document.getElementById('email').value   = '';
     document.getElementById('subject').value = '';
