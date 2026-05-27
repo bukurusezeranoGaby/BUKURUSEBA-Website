@@ -1,6 +1,4 @@
-/* ============================
-   RESET & BASE
-   ============================ */
+/*RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -24,9 +22,7 @@ a {
   color: inherit;
 }
 
-/* ============================
-   NAVBAR
-   ============================ */
+/* NAVBAR */
 .nav {
   position:sticky;
   top: 0;
@@ -67,9 +63,7 @@ a {
   color: #ffa500;
 }
 
-/* ============================
-   BUTTON
-   ============================ */
+/*  BUTTON */
 .btn {
   display: inline-block;
   padding: 14px 36px;
@@ -89,9 +83,8 @@ a {
   color: #ffa500;
 }
 
-/* ============================
-   HERO
-   ============================ */
+/*  HERO */
+ 
 .hero {
   min-height: 100vh;
   display: flex;
@@ -166,9 +159,8 @@ a {
   animation: fadeUp 1s ease 0.3s both;
 }
 
-/* ============================
-   ABOUT
-   ============================ */
+/*  ABOUT */
+
 .about {
   padding: 100px 50px;
   background: #111;
@@ -240,9 +232,8 @@ a {
   color: #666;
 }
 
-/* ============================
-   MUSIC
-   ============================ */
+/* MUSIC*/
+
 .music {
   padding: 100px 50px;
   background: #0a0a0a;
@@ -324,9 +315,8 @@ a {
   color: #0a0a0a;
 }
 
-/* ============================
-   CONTACT
-   ============================ */
+/* CONTACT */
+
 .contact {
   padding: 100px 50px;
   background: #111;
@@ -390,9 +380,8 @@ a {
   color: #ffa500;
 }
 
-/* ============================
-   FOOTER
-   ============================ */
+/*  FOOTER */
+
 .footer {
   background: #0a0a0a;
   border-top: 1px solid #1a1a1a;
@@ -420,9 +409,8 @@ a {
   50%       { transform: translate(-50%, -55%) scale(1.12); }
 }
 
-/* ============================
-   RESPONSIVE (Mobile)
-   ============================ */
+/* RESPONSIVE (Mobile) */
+
 @media (max-width: 768px) {
   .nav { padding: 16px 24px; }
   .nav-links { display: none; }
@@ -433,6 +421,7 @@ a {
   .music { padding: 70px 24px; }
   .contact { padding: 70px 24px; }
 }
+
 /* Form feedback messages */
 #formMessage {
   font-size: 14px;
